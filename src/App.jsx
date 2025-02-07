@@ -28,7 +28,13 @@ export default function App() {
       {loading 
         ? <h1>Loading...</h1>
         : productsData.map((item => (
-          <li key={item.title}>{item.title}</li>
+          <li key={item.title}>
+            <h3>{item.title}</h3>
+            <p>{item.price}</p>
+            <p>{item.category}</p>
+            <p>{item.description}</p>
+            <img src={item.image} alt={item.title} width='300px'/>
+          </li>
         )))
       }
     </ul>
