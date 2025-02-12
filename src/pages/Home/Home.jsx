@@ -1,5 +1,6 @@
 import { useContext } from "react"
-import { ProductsContext } from "../context/ProductsContext"
+import { ProductsContext } from "../../context/ProductsContext"
+import mainStyles from "./Home.module.css"
 
 export default function Home () {
     const { productsData, error, loading } = useContext(ProductsContext);
@@ -8,7 +9,7 @@ export default function Home () {
     if (error) return <h1>{error.message}</h1>
 
     return (
-        <>
+        <main className={mainStyles.main}>
             {productsData.map(item => (
                 <ul key={item.title}>
                     <li>{item.title}</li>
@@ -18,6 +19,6 @@ export default function Home () {
                     <img src={item.image} alt={item.title} width="300px" />
                 </ul>
             ))}
-        </>
+        </main>
     )
 }

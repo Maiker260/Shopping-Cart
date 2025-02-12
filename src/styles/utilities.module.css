@@ -1,0 +1,23 @@
+.gridTwoMain {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    gap: 1em;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexColumnSpaceAround {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

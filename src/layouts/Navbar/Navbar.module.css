@@ -1,0 +1,26 @@
+.navbar {
+    padding: 3em;
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+    width: fit-content;
+}
+
+.logoContainer {
+    gap: 4em;
+    cursor: pointer;
+}
+
+.listContainer {
+    list-style-type: none;
+    gap: 1em;
+}
+
+.list {
+    cursor: pointer;
+}
+
+.list:hover {
+    text-decoration: underline;
+    color: cadetblue;
+}

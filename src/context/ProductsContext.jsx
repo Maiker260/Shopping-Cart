@@ -1,5 +1,8 @@
 import { createContext, useState, useEffect } from "react";
 import { fetchProductsData } from "../utils/fetchProductsData";
+import NavBar from "../layouts/Navbar/Navbar";
+import utilStyles from "../styles/utilities.module.css"
+import contStyles from "../layouts/container.module.css"
 
 export const ProductsContext = createContext();
 
@@ -24,7 +27,10 @@ export function ProductsProvider ({ children }) {
 
     return (
         <ProductsContext.Provider value={{ productsData, error, loading }} >
-            {children}
+            <div className={`${utilStyles.gridTwoMain} ${contStyles.container}`}>
+                <NavBar />
+                {children}
+            </div>
         </ProductsContext.Provider>
     )
 }
