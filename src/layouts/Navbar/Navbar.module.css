@@ -8,7 +8,6 @@
 
 .logoContainer {
     gap: 4em;
-    cursor: pointer;
 }
 
 .listContainer {
@@ -18,9 +17,25 @@
 
 .list {
     cursor: pointer;
+    fill: white;
+}
+
+.list:link, .list:visited, .list:active {
+    color: inherit;
+    text-decoration: none;
 }
 
 .list:hover {
     text-decoration: underline;
     color: cadetblue;
+    fill: cadetblue;
+}
+
+.mainTitle:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.iconList {
+    width: 30px;
 }

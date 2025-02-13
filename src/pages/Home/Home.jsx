@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { ProductsContext } from "../../context/ProductsContext"
+import Hero from "../../layouts/Hero/Hero";
 import mainStyles from "./Home.module.css"
 
 export default function Home () {
@@ -10,6 +11,7 @@ export default function Home () {
 
     return (
         <main className={mainStyles.main}>
+            <Hero />
             {productsData.map(item => (
                 <ul key={item.title}>
                     <li>{item.title}</li>

@@ -1,0 +1,46 @@
+.container {
+    padding: 0;
+}
+
+.sliderWrapper {
+    max-width: 100%;
+    position: relative;
+}
+
+.slide {
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 1em;
+}
+
+.slide img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.sliderNavbar {
+    position: absolute;
+    bottom: 1.25em;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 1em;
+    z-index: 2;
+}
+
+.sliderNavbarItem {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: transform .2s;
+}
+
+.sliderNavbarItem:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.6);
+}
