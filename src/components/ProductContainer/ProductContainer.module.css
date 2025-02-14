@@ -1,0 +1,17 @@
+.productImage {
+    border-radius: 8px;
+    height: 200px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.productImage:hover{
+    transform: scale(1);
+}
+
+.productDescription {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: auto;
+}

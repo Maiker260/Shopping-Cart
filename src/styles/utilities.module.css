@@ -1,8 +1,14 @@
 .gridTwoMain {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: 1fr;
-    gap: 1em;
+    grid-column-gap: 20px;
+}
+
+.gridAutoFit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
 }
 
 .flexCenter {

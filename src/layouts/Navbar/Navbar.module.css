@@ -1,9 +1,9 @@
 .navbar {
-    padding: 3em;
+    width: fit-content;
     background-color: black;
     color: white;
     border-radius: 1em;
-    width: fit-content;
+    padding: 2em;
 }
 
 .logoContainer {

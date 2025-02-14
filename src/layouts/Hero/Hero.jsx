@@ -1,4 +1,5 @@
 import HeroStyles from "./Hero.module.css"
+import utilStyles from "../../styles/utilities.module.css"
 
 export default function Hero({}) {
 
@@ -11,8 +12,8 @@ export default function Hero({}) {
     ]
 
     return (
-        <section className={HeroStyles.container}>
-            <div className={HeroStyles.sliderWrapper}>
+        <section className={`${utilStyles.flexColumn} ${HeroStyles.container}`}>
+            <article className={HeroStyles.sliderWrapper}>
                 <div className={`flex ${HeroStyles.slide}`}>
                     {images.map((image, index) => (
                         <img key={index} src={image.src} alt={image.alt} />
@@ -23,6 +24,9 @@ export default function Hero({}) {
                         <div key={index} className={`${HeroStyles.sliderNavbarItem}`}></div>
                     ))}
                 </div>
+            </article>
+            <div className="sectionSeparator">
+                <h3>14 DAYS RETURN POLICY</h3>
             </div>
         </section>
     )
