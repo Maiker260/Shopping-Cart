@@ -12,7 +12,7 @@ export default function Hero({}) {
     ]
 
     return (
-        <section className={`${utilStyles.flexColumn} ${HeroStyles.container}`}>
+        <section className={`${utilStyles.flexColumn} ${utilStyles.sectionContainer} ${HeroStyles.container}`}>
             <article className={HeroStyles.sliderWrapper}>
                 <div className={`flex ${HeroStyles.slide}`}>
                     {images.map((image, index) => (

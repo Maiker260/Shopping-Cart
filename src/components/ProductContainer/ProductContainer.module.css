@@ -1,12 +1,21 @@
-.productImage {
-    border-radius: 8px;
-    height: 200px;
-    object-fit: contain;
-    width: 100%;
+.productContainer {
+    width: fit-content;
+    justify-items: center;
+    box-shadow: 4px 5px 8px -1px #00000075;
+    border-radius: 10px;
+    background-color: white;
+    transition: .1s ease-in-out;
 }
 
-.productImage:hover{
-    transform: scale(1);
+.productContainer:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.productImage {
+    border-radius: 10px;
+    height: 200px;
+    padding: 0.6em 0.6em 0;
 }
 
 .productDescription {
@@ -14,4 +23,20 @@
     color: white;
     width: 100%;
     height: auto;
+    padding: 0.5em;
+    border-radius: 10px;
+    gap: 0.5em;
+    text-align: center;
+    margin-top: 0.4em;
+}
+
+.productTitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 18ch;
+    white-space: nowrap;
+}
+
+.productPrice {
+    font-weight: bold;
 }

@@ -7,17 +7,17 @@ import utilStyles from "../../../styles/utilities.module.css"
 export default function NewProducts() {
 
     const { productsData } = useContext(ProductsContext);
-    const filteredProducts = selectProducts(productsData, 2, 4);
+    const filteredProducts = selectProducts(productsData, 1, 5);
 
     return (
-        <article>
-            <h2>New Products</h2>
+        <article className={`${utilStyles.flexColumn} ${utilStyles.sectionContainer}`}>
+            <h2 className={utilStyles.sectionTitle}>New Products</h2>
             <div className={utilStyles.gridAutoFit}>
                 {filteredProducts.map((item) => (
                     <ProductContainer key={item.title} item={item}/>
                 ))}
             </div>
-            <button>See All New Products</button>
+            <button className={utilStyles.buttonMainStyle}>View More</button>
         </article>
     )
 }

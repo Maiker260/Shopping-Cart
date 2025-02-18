@@ -26,7 +26,6 @@
 }
 
 .list:hover {
-    text-decoration: underline;
     color: cadetblue;
     fill: cadetblue;
 }

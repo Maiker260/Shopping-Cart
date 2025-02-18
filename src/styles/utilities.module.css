@@ -7,8 +7,9 @@
 
 .gridAutoFit {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 3em;
+    justify-items: center;
 }
 
 .flexCenter {
@@ -26,4 +27,31 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.sectionContainer {
+    gap: 3em;
+    margin-bottom: 3em;
+}
+
+.buttonMainStyle {
+    font-size: 1.1rem;
+    max-width: fit-content;
+    color: white;
+    background-color: black;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    align-self: center;
+    transition: .1s ease-in-out;
+}
+
+.buttonMainStyle:hover {
+    transform: scale(1.02);
 }
