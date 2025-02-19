@@ -10,10 +10,15 @@
 
 .slide {
     aspect-ratio: 16/9;
-    overflow-x: auto;
+    overflow: hidden;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     border-radius: 1em;
+}
+
+.slide::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in Chrome, Safari */
 }
 
 .slide img {

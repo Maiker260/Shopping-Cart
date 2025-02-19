@@ -7,7 +7,8 @@
 
 .gridAutoFit {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 1em 1.5em;
     gap: 3em;
     justify-items: center;
 }
@@ -35,7 +36,7 @@
 }
 
 .sectionContainer {
-    gap: 3em;
+    gap: 2em;
     margin-bottom: 3em;
 }
 

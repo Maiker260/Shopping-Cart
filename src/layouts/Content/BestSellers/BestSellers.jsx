@@ -1,5 +1,17 @@
-export default function BestSellers() {
+import { useContext } from "react";
+import { ProductsContext } from "../../../context/ProductsContext";
+import selectProducts from "../../../utils/selectProducts";
+import ProductsSection from "../ProductSection/ProductsSection";
+
+export default function NewProducts() {
+    const { productsData } = useContext(ProductsContext);
+    const filteredProducts = selectProducts(productsData, 7, 12);
+
     return (
-        <h1>BestSellers</h1>
+        <ProductsSection 
+            data={filteredProducts}
+            title="Best Sellers"
+            moreButtonTitle="View All"
+        />
     )
 }
