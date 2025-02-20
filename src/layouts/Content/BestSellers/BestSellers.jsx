@@ -5,7 +5,7 @@ import ProductsSection from "../ProductSection/ProductsSection";
 
 export default function NewProducts() {
     const { productsData } = useContext(ProductsContext);
-    const filteredProducts = selectProducts(productsData, 7, 12);
+    const filteredProducts = selectProducts(productsData, 11, 20);
 
     return (
         <ProductsSection 
