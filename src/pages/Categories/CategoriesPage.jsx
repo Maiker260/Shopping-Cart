@@ -1,7 +1,8 @@
 import { useContext } from "react"
 import { ProductsContext } from "../../context/ProductsContext"
-import utilStyles from "../../styles/utilities.module.css"
 import ProductContainer from "../../components/ProductContainer/ProductContainer";
+import utilStyles from "../../styles/utilities.module.css"
+import catPageStyles from "./CategoriesPage.module.css"
 
 export default function CategoriesPage() {
     const { categories } = useContext(ProductsContext);
@@ -9,7 +10,7 @@ export default function CategoriesPage() {
     return (
         <section className={`${utilStyles.flexColumn} ${utilStyles.mainContainer} ${utilStyles.sectionContainer}`}>
             <h1 className={utilStyles.sectionTitle}>Categories</h1>
-            <article className={`${utilStyles.gridAutoFit}`}>
+            <article className={`${utilStyles.gridAutoFit} ${catPageStyles.categoriesContainer}`}>
                 {categories.map(categ => (
                     <ProductContainer 
                         key={categ.name}
