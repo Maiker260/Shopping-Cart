@@ -7,7 +7,7 @@
 
 .gridAutoFit {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
     padding: 1em 1.5em;
     gap: 3em;
     justify-items: center;
@@ -17,6 +17,11 @@
     display: flex;
     align-items: center;
     gap: 1em;
+}
+
+.flexJustCenter {
+    display: flex;
+    justify-content: center;
 }
 
 .flexColumn {
@@ -37,7 +42,17 @@
 
 .sectionContainer {
     gap: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 4em;
+}
+
+.mainContainer {
+    overflow: hidden;
+    overflow-y: scroll;
+    gap: 2em;
+}
+
+.mainContainer::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in Chrome, Safari*/
 }
 
 .buttonMainStyle {

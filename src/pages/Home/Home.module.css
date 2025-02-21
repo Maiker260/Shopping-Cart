@@ -1,8 +1,0 @@
-.main {
-    overflow: hidden;
-    overflow-y: scroll;
-}
-
-.main::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar in Chrome, Safari*/
-}

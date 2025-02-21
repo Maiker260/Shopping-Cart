@@ -1,12 +1,16 @@
-import navStyles from "./Navbar.module.css";
-import utilStyles from "../../styles/utilities.module.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ProductsContext } from "../../context/ProductsContext";
 import HomeIcon from "../../components/Icons/HomeIcon";
 import CartIcon from "../../components/Icons/CartIcon";
 import CategoriesIcon from "../../components/Icons/CategoriesIcon";
 import SearchIcon from "../../components/Icons/SearchIcon";
+import navStyles from "./Navbar.module.css";
+import utilStyles from "../../styles/utilities.module.css";
 
 function NavBar({}) {
+    const { cart } = useContext(ProductsContext);
+
     return (
         <nav className={`${navStyles.navbar} ${utilStyles.flexColumnSpaceAround}`}>
             <section className={`${utilStyles.flexColumn} ${navStyles.logoContainer}`}>
@@ -30,6 +34,7 @@ function NavBar({}) {
                     <Link to="Cart" className={`${utilStyles.flexCenter} ${navStyles.list}`}>
                         <CartIcon className={navStyles.iconList}/>
                         <li>Cart</li>
+                        <span className={navStyles.cartCounter}>{cart.length}</span>
                     </Link>
                 </ul>
             </section>

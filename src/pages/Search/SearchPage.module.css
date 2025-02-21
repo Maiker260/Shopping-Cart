@@ -1,0 +1,6 @@
+.productsContainer {
+    background-color: white;
+    overflow-y: auto;
+    border-radius: 1em;
+    padding: 1.5em;
+}

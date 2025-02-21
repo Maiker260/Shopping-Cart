@@ -3,7 +3,7 @@ import { ProductsContext } from "../../context/ProductsContext"
 import Hero from "../../layouts/Hero/Hero";
 import Content from "../../layouts/Content/Content";
 import Footer from "../../layouts/Footer/Footer";
-import mainStyles from "./Home.module.css"
+import utilstyles from "../../styles/utilities.module.css"
 
 export default function Home () {
     const { productsData, error, loading } = useContext(ProductsContext);
@@ -12,7 +12,7 @@ export default function Home () {
     if (error) return <h1>{error.message}</h1>
 
     return (
-        <main className={mainStyles.main}>
+        <main className={utilstyles.mainContainer}>
             <Hero />
             <Content />
             <Footer />

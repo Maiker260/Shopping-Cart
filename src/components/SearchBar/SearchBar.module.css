@@ -1,0 +1,25 @@
+.prodFound {
+    text-align: center;
+    color: white;
+}
+
+.searchBarContainer {
+    background-color: black;
+    padding: 1.5em;
+    border-radius: 1em;
+    gap: 1em;
+}
+
+.searchBarFilters {
+    color: black;
+    /* Need to Change */
+}
+
+.searchBarInput {
+    width: 100%;
+}
+
+.inputs {
+    border-radius: 8px;
+    padding: 8px;
+}

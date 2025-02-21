@@ -38,3 +38,13 @@
 .iconList {
     width: 30px;
 }
+
+.cartCounter {
+    height: 25px;
+    width: 25px;
+    border-radius: 3em;
+    background-color: cadetblue;
+    color: white;
+    line-height: 25px;
+    text-align: center;
+}
