@@ -46,9 +46,11 @@
 }
 
 .mainContainer {
-    overflow: hidden;
-    overflow-y: scroll;
-    gap: 2em;
+    /* overflow: hidden;
+    overflow-y: scroll; */
+    min-width: 300px; 
+    max-width: 1550px;
+    margin: 0 auto;
 }
 
 .mainContainer::-webkit-scrollbar {

@@ -15,7 +15,7 @@ const routes = [
         children: [
             { path: "/", element: <Home /> },
             { path: "CategoriesPage", element: <CategoriesPage /> },
-            { path: "product/:id", element: <ProductPage /> },
+            { path: "/product/:id", element: <ProductPage /> },
             { path: "SearchPage", element: <SearchPage /> },
             { path: "Cart", element: <Cart /> },
             { path: "AboutUs", element: <AboutUs /> },

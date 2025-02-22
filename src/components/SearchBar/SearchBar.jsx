@@ -7,7 +7,7 @@ import utilStyles from "../../styles/utilities.module.css"
 
 export default function SearchBar() {
     const { categories } = useContext(ProductsContext);
-    const { changeFilter } = useContext(FilterContext);
+    const { changeFilter, filteredData } = useContext(FilterContext);
 
     return (
         <aside className={`${srchBarStyle.searchBarContainer} ${utilStyles.flexColumn}`}>
@@ -43,7 +43,7 @@ export default function SearchBar() {
                 </select>
             </div>
             <div className={srchBarStyle.prodFound}>
-                <h4>Products Found:</h4>
+                <h4>Products Found: {filteredData.length}</h4>
             </div>
         </aside>
     );

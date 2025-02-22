@@ -1,10 +1,11 @@
+import capitalizeFirstLetter from "../../utils/capitalizeFirstLetter"
 import produContaStyle from "./ProductContainer.module.css"
 import utilStyles from "../../styles/utilities.module.css"
-import capitalizeFirstLetter from "../../utils/capitalizeFirstLetter"
+import { Link } from "react-router-dom";
 
 export default function ProductContainer({ item, isACategoryContainer = false }) {
     return (
-        <div className={`${utilStyles.flexColumn} ${produContaStyle.productContainer}`}>
+        <Link to={`/product/${item.id}`} className={`${utilStyles.flexColumn} ${produContaStyle.productContainer} ${produContaStyle.product}`}>
             <div className={`flex ${produContaStyle.productImageContainer}`}>
                 <img src={item.image} alt={item.title} className={produContaStyle.productImage} />
             </div>
@@ -14,9 +15,9 @@ export default function ProductContainer({ item, isACategoryContainer = false })
                     : <>
                         <h4 className={produContaStyle.productTitle} title={item.title}>{item.title}</h4>
                         <p className={produContaStyle.productPrice}>{`$${item.price}`}</p>
-                      </>
+                    </>
                 }
             </div>
-        </div>
+        </Link>
     )
 }

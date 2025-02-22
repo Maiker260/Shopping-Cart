@@ -11,12 +11,12 @@ export const FilterContext = createContext();
 export default function SearchPage() {
     const { productsData } = useContext(ProductsContext);
     
+    const [filteredData, setfilteredData] = useState([]);
     const [filters, setFilters] = useState({
         category: 'all',
-        sortBy: 'feature',
+        sortBy: 'featured',
         searchQuery: '',
     })
-    const [filteredData, setfilteredData] = useState([]);
     
     useEffect(() => {
         setfilteredData(filterItems(productsData, filters));
@@ -27,8 +27,9 @@ export default function SearchPage() {
             filters,
             setFilters,
             changeFilter: (key, value) => setFilters(prev => ({ ...prev, [key]: value })),
+            filteredData
         }}> 
-            <section className={`${utilStyles.flexColumn} ${utilStyles.mainContainer}`}>
+            <section className={`${utilStyles.flexColumn} ${utilStyles.mainContainer} ${srchPageStyle.searchPageContainer}`}>
                 <SearchBar />
                 <article className={`${utilStyles.gridAutoFit} ${srchPageStyle.productsContainer}`}>
                     {filteredData.map(itm => (
@@ -38,7 +39,6 @@ export default function SearchPage() {
                         />
                     ))}
                 </article>
-                <h1>{filters.sortBy}</h1>
             </section>
         </FilterContext.Provider>
     )
