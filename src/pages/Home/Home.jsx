@@ -6,7 +6,7 @@ import Footer from "../../layouts/Footer/Footer";
 import utilstyles from "../../styles/utilities.module.css"
 
 export default function Home () {
-    const { productsData, error, loading } = useContext(ProductsContext);
+    const { error, loading } = useContext(ProductsContext);
 
     if (loading) return <h1>Loading....</h1>
     if (error) return <h1>{error.message}</h1>
