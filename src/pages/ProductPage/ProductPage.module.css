@@ -1,0 +1,43 @@
+.container {
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+    gap: 2em;
+    min-height: 95vh;
+}
+
+.productPageContainer {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 2em;
+}
+
+.imageContainer {
+    aspect-ratio: 16 / 9;
+    width: 350px;
+    height: auto;
+}
+
+.productImage {
+    width: 100%;
+    padding: 1em;
+}
+
+.infoContainer {
+    gap: 3em;
+    padding: 1em;
+}
+
+.title {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #afabab;
+}
+
+.info {
+    gap: 2em;
+}
+
+.priceContainer {
+    border: 1px solid #afabab;
+    border-radius: 1em;
+    padding: 1em;
+}

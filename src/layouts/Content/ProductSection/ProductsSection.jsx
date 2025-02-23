@@ -1,4 +1,5 @@
 import ProductContainer from "../../../components/ProductContainer/ProductContainer";
+import Button from "../../../components/Button/Button";
 import utilStyles from "../../../styles/utilities.module.css"
 import productStyles from "./ProductsSection.module.css"
 
@@ -11,7 +12,9 @@ export default function ProductsSection({ data, title, moreButtonTitle }) {
                     <ProductContainer key={item.title} item={item}/>
                 ))}
             </div>
-            <button className={utilStyles.buttonMainStyle}>{moreButtonTitle}</button>
+            <Button 
+                name={moreButtonTitle}
+            />
         </article>
     )
 }
