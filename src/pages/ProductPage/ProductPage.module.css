@@ -40,4 +40,5 @@
     border: 1px solid #afabab;
     border-radius: 1em;
     padding: 1em;
+    height: fit-content;
 }

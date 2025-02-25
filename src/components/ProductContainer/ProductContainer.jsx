@@ -4,8 +4,12 @@ import utilStyles from "../../styles/utilities.module.css"
 import { Link } from "react-router-dom";
 
 export default function ProductContainer({ item, isACategoryContainer = false }) {
+    const infoSelected = isACategoryContainer
+        ? `/categories/${item.category}`
+        : `/categories/${item.category}/${item.id}`
+
     return (
-        <Link to={`/product/${item.id}`} className={`${utilStyles.flexColumn} ${produContaStyle.productContainer} ${produContaStyle.product}`}>
+        <Link to={infoSelected} className={`${utilStyles.flexColumn} ${produContaStyle.productContainer} ${produContaStyle.product}`}>
             <div className={`flex ${produContaStyle.productImageContainer}`}>
                 <img src={item.image} alt={item.title} className={produContaStyle.productImage} />
             </div>

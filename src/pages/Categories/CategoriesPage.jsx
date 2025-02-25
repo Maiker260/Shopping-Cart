@@ -7,6 +7,10 @@ import catPageStyles from "./CategoriesPage.module.css"
 export default function CategoriesPage() {
     const { categories } = useContext(ProductsContext);
 
+    if (!categories) {
+        return <h1>Loading...</h1>;
+    }
+
     return (
         <section className={`${utilStyles.flexColumn} ${utilStyles.mainContainer} ${utilStyles.sectionContainer}`}>
             <h1 className={utilStyles.sectionTitle}>Categories</h1>

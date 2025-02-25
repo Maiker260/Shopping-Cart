@@ -70,6 +70,18 @@
     transition: .1s ease-in-out;
 }
 
-.buttonMainStyle:hover {
+.buttonMainStyle:hover, .buttonSecStyle:hover {
     transform: scale(1.02);
+}
+
+.buttonSecStyle {
+    font-size: 0.9rem;
+    max-width: fit-content;
+    color: white;
+    background-color: black;
+    padding: 0.6em 1.5em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: .1s ease-in-out;
 }

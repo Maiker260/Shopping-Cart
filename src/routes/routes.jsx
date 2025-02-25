@@ -7,6 +7,7 @@ import RootPage from "../pages/RootPage";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import ProductPage from "../pages/ProductPage/ProductPage";
+import CategoryContent from "../pages/Categories/CategoryContent";
 
 const routes = [
     {
@@ -14,12 +15,13 @@ const routes = [
         element: <RootPage />,
         children: [
             { path: "/", element: <Home /> },
-            { path: "CategoriesPage", element: <CategoriesPage /> },
-            { path: "/product/:id", element: <ProductPage /> },
-            { path: "SearchPage", element: <SearchPage /> },
-            { path: "Cart", element: <Cart /> },
-            { path: "AboutUs", element: <AboutUs /> },
-            { path: "ContactUs", element: <ContactUs /> },
+            { path: "categories", element: <CategoriesPage /> },
+            { path: "categories/:category", element: <CategoryContent /> },
+            { path: "categories/:category/:id", element: <ProductPage /> },
+            { path: "search", element: <SearchPage /> },
+            { path: "cart", element: <Cart /> },
+            { path: "aboutUs", element: <AboutUs /> },
+            { path: "contactUs", element: <ContactUs /> },
         ]
     }, 
     {
