@@ -46,8 +46,6 @@
 }
 
 .mainContainer {
-    /* overflow: hidden;
-    overflow-y: scroll; */
     min-width: 300px; 
     max-width: 1550px;
     margin: 0 auto;
@@ -68,6 +66,7 @@
     cursor: pointer;
     align-self: center;
     transition: .1s ease-in-out;
+    text-decoration: none;
 }
 
 .buttonMainStyle:hover, .buttonSecStyle:hover {

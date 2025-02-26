@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import ProductContainer from "../../../components/ProductContainer/ProductContainer";
-import Button from "../../../components/Button/Button";
 import utilStyles from "../../../styles/utilities.module.css"
 import productStyles from "./ProductsSection.module.css"
 
@@ -12,9 +12,9 @@ export default function ProductsSection({ data, title, moreButtonTitle }) {
                     <ProductContainer key={item.title} item={item}/>
                 ))}
             </div>
-            <Button 
-                name={moreButtonTitle}
-            />
+            <Link to="search" className={utilStyles.buttonMainStyle}>
+                {moreButtonTitle}
+            </Link>
         </article>
     )
 }

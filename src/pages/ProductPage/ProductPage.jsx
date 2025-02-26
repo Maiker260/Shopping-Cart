@@ -19,7 +19,6 @@ export default function ProductPage() {
         return <h1>Loading...</h1>;
     }
 
-
     return (
         <section className={`${utilStyles.flexColumn} ${prodPageStyles.container} ${utilStyles.mainContainer}`}>
                 <Button name="Go Back" isSecundBtn onClick={() => navigate(-1)}/>
@@ -40,6 +39,7 @@ export default function ProductPage() {
                 </article>
                 <article className={prodPageStyles.priceContainer}>
                     <PurchaseInfo 
+                        item={product}
                         price={product.price}
                     />
                 </article>

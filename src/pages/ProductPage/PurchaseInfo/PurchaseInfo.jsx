@@ -1,8 +1,10 @@
+import { useContext } from "react";
+import { ProductsContext } from "../../../context/ProductsContext";
 import Button from "../../../components/Button/Button"
 import purchaStyles from "./PurchaseInfo.module.css"
 import utilStyles from "../../../styles/utilities.module.css"
 
-export default function PurchaseInfo({ price }) {
+export default function PurchaseInfo({ price, item }) {
     const currentDate = new Date();
     const monthNames = [
     "January", "February", "March", "April", "May", "June",
@@ -16,6 +18,15 @@ export default function PurchaseInfo({ price }) {
             ? `${monthNames[currentDate.getMonth() + 1]}, 2 `
             : `${userMonthName}, ${userDay + 5}`
 
+    const { cart, setCart } = useContext(ProductsContext)
+
+    const addToCart = () => {
+        if (!cart.includes(item)) {
+            setCart(prev => [...prev, item]);
+            alert("Product Added to the cart.")
+        }
+    }
+
     return (
         <article className={`${utilStyles.flexColumn} ${purchaStyles.addToCartContainer}`}>
             <h2><span className={purchaStyles.currency}>US$</span>{price}</h2>
@@ -24,6 +35,7 @@ export default function PurchaseInfo({ price }) {
             <p></p>
             <Button 
                 name="Add to Cart"
+                onClick={addToCart}
             />
         </article>
     )

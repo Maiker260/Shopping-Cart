@@ -1,11 +1,11 @@
-import { useContext } from "react"
-import { ProductsContext } from "../../context/ProductsContext"
-import { FilterContext } from "../../pages/Search/SearchPage"
-import capitalizeFirstLetter from "../../utils/capitalizeFirstLetter"
-import srchBarStyle from "./SearchBar.module.css"
-import utilStyles from "../../styles/utilities.module.css"
+import { useContext } from "react";
+import { ProductsContext } from "../../context/ProductsContext";
+import { FilterContext } from "../../pages/Search/SearchPage";
+import capitalizeFirstLetter from "../../utils/capitalizeFirstLetter";
+import srchBarStyle from "./SearchBar.module.css";
+import utilStyles from "../../styles/utilities.module.css";
 
-export default function SearchBar() {
+export default function SearchBar({ }) {
     const { categories } = useContext(ProductsContext);
     const { changeFilter, filteredData } = useContext(FilterContext);
 

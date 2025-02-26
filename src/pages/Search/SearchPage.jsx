@@ -10,7 +10,7 @@ export const FilterContext = createContext();
 
 export default function SearchPage() {
     const { productsData } = useContext(ProductsContext);
-    
+
     const [filteredData, setfilteredData] = useState([]);
     const [filters, setFilters] = useState({
         category: 'all',
@@ -30,7 +30,9 @@ export default function SearchPage() {
             filteredData
         }}> 
             <section className={`${utilStyles.flexColumn} ${utilStyles.mainContainer} ${srchPageStyle.searchPageContainer}`}>
-                <SearchBar />
+                <SearchBar 
+                    searchParam={section}
+                />
                 <article className={`${utilStyles.gridAutoFit} ${srchPageStyle.productsContainer}`}>
                     {filteredData.map(itm => (
                         <ProductContainer 
