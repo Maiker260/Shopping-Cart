@@ -30,9 +30,7 @@ export default function SearchPage() {
             filteredData
         }}> 
             <section className={`${utilStyles.flexColumn} ${utilStyles.mainContainer} ${srchPageStyle.searchPageContainer}`}>
-                <SearchBar 
-                    searchParam={section}
-                />
+                <SearchBar />
                 <article className={`${utilStyles.gridAutoFit} ${srchPageStyle.productsContainer}`}>
                     {filteredData.map(itm => (
                         <ProductContainer 
