@@ -39,10 +39,10 @@ function NavBar({}) {
                 </ul>
             </section>
             <ul className={`${navStyles.listContainer} ${utilStyles.flexColumn}`}>
-                <Link to="aboutUs" className={`${utilStyles.flexCenter} ${navStyles.list}`}>
+                <Link to="#" className={`${utilStyles.flexCenter} ${navStyles.list}`}>
                     <li>About Us</li>
                 </Link>
-                <Link to="contactUs" className={`${utilStyles.flexCenter} ${navStyles.list}`}>
+                <Link to="#" className={`${utilStyles.flexCenter} ${navStyles.list}`}>
                     <li>Contact Us</li>
                 </Link>
             </ul>

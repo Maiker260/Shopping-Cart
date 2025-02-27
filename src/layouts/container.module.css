@@ -1,6 +1,6 @@
 .container {
     padding: 1em;
-    background-color: #f5f5f5;
+    background-color: var(--items-container-color);
     height: 100vh;
 }
 

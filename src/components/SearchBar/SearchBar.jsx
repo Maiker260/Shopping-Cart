@@ -11,7 +11,7 @@ export default function SearchBar({ }) {
 
     return (
         <aside className={`${srchBarStyle.searchBarContainer} ${utilStyles.flexColumn}`}>
-            <div className={`${srchBarStyle.searchBarFilters} ${utilStyles.flexJustCenter} ${utilStyles.flexCenter}`}>
+            <div className={`${utilStyles.flexJustCenter} ${utilStyles.flexCenter}`}>
                 <input
                     className={`${srchBarStyle.inputs} ${srchBarStyle.searchBarInput}`}
                     type="search"

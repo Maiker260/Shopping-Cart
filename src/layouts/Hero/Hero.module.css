@@ -9,29 +9,35 @@
 }
 
 .slide {
+    display: flex;
     aspect-ratio: 16/9;
     overflow: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     border-radius: 1em;
+    white-space: nowrap;
 }
 
 .slide::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar in Chrome, Safari */
+    display: none; /* Hides the scrollbar */
 }
 
 .slide img {
-    flex: 1 0 100%;
+    flex: 0 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
+/* Navigation Dots */
 .sliderNavbar {
     position: absolute;
     bottom: 1.25em;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
     gap: 1em;
     z-index: 2;
 }
@@ -40,13 +46,40 @@
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--items-container-color);
     opacity: 0.75;
-    transition: transform .2s;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 .sliderNavbarItem:hover {
     opacity: 1;
     cursor: pointer;
     transform: scale(1.6);
+}
+
+.sliderNavbarItem.active {
+    background-color: var(--secondary-color);
+    transform: scale(1.4);
+}
+
+/* Navigation Buttons */
+.prevButton,
+.nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--font-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prevButton { left: 10px; }
+.nextButton { right: 10px; }
+
+.prevButton:hover,
+.nextButton:hover {
+    background-color: var(--main-container-color);
 }

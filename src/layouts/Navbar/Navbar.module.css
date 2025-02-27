@@ -1,7 +1,7 @@
 .navbar {
     width: fit-content;
-    background-color: black;
-    color: white;
+    background-color: var(--main-container-color);
+    color: var(--font-color);
     border-radius: 1em;
     padding: 2em;
 }
@@ -17,7 +17,7 @@
 
 .list {
     cursor: pointer;
-    fill: white;
+    fill: var(--items-container-color);
 }
 
 .list:link, .list:visited, .list:active {
@@ -26,8 +26,8 @@
 }
 
 .list:hover {
-    color: cadetblue;
-    fill: cadetblue;
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
 }
 
 .mainTitle:hover {
@@ -43,8 +43,8 @@
     height: 25px;
     width: 25px;
     border-radius: 3em;
-    background-color: cadetblue;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     line-height: 25px;
     text-align: center;
 }

@@ -1,0 +1,25 @@
+.button {
+    max-width: fit-content;
+    color: var(--font-color);
+    background-color: var(--main-container-color);
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    text-decoration: none;
+}
+
+.buttonMainStyle {
+    font-size: 1.1rem;
+    padding: 1em;
+    align-self: center;
+}
+
+.buttonSecStyle {
+    font-size: 0.9rem;
+    padding: 0.6em 1.5em;
+}
+
+.buttonMainStyle:hover, .buttonSecStyle:hover {
+    transform: scale(1.02);
+}

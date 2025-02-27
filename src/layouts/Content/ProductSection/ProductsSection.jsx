@@ -12,7 +12,7 @@ export default function ProductsSection({ data, title, moreButtonTitle }) {
                     <ProductContainer key={item.title} item={item}/>
                 ))}
             </div>
-            <Link to="search" className={utilStyles.buttonMainStyle}>
+            <Link to="search" className={productStyles.vieMoreButton}>
                 {moreButtonTitle}
             </Link>
         </article>

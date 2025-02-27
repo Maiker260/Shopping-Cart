@@ -1,12 +1,12 @@
-import utilStyles from "../../styles/utilities.module.css"
+import btnStyles from "./Button.module.css"
 
 export default function Button ({ name, isSecundBtn = false, onClick }) {
     const buttonStyle = isSecundBtn
-        ? utilStyles.buttonSecStyle
-        : utilStyles.buttonMainStyle
+        ? btnStyles.buttonSecStyle
+        : btnStyles.buttonMainStyle
 
     return (
-        <button className={buttonStyle} onClick={onClick}>
+        <button className={`${btnStyles.button} ${buttonStyle}`} onClick={onClick}>
             {name}
         </button>
     )

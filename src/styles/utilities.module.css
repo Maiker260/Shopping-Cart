@@ -51,36 +51,10 @@
     margin: 0 auto;
 }
 
+.currency {
+    font-size: 0.9rem;
+}
+
 .mainContainer::-webkit-scrollbar {
     display: none; /* Hides the scrollbar in Chrome, Safari*/
-}
-
-.buttonMainStyle {
-    font-size: 1.1rem;
-    max-width: fit-content;
-    color: white;
-    background-color: black;
-    padding: 1em;
-    border: none;
-    border-radius: 0.5em;
-    cursor: pointer;
-    align-self: center;
-    transition: .1s ease-in-out;
-    text-decoration: none;
-}
-
-.buttonMainStyle:hover, .buttonSecStyle:hover {
-    transform: scale(1.02);
-}
-
-.buttonSecStyle {
-    font-size: 0.9rem;
-    max-width: fit-content;
-    color: white;
-    background-color: black;
-    padding: 0.6em 1.5em;
-    border: none;
-    border-radius: 0.5em;
-    cursor: pointer;
-    transition: .1s ease-in-out;
 }

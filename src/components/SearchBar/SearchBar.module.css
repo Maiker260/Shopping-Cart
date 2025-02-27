@@ -1,18 +1,13 @@
 .prodFound {
     text-align: center;
-    color: white;
+    color: var(--font-color);
 }
 
 .searchBarContainer {
-    background-color: black;
+    background-color: var(--main-container-color);
     padding: 1.5em;
     border-radius: 1em;
     gap: 1em;
-}
-
-.searchBarFilters {
-    color: black;
-    /* Need to Change */
 }
 
 .searchBarInput {

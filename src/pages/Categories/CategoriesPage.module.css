@@ -1,5 +1,11 @@
 .categoriesContainer {
-    background-color: white;
+    background-color: var(--items-container-color);
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.categoryContent {
+    background-color: var(--items-container-color);
     border-radius: 1em;
     padding: 1.5em;
 }

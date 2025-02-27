@@ -1,12 +1,12 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { useContext } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
 import capitalizeFirstLetter from "../../utils/capitalizeFirstLetter";
 import ShippingInfo from "./ShippingInfo/ShippingInfo";
 import PurchaseInfo from "./PurchaseInfo/PurchaseInfo";
+import Button from "../../components/Button/Button";
 import utilStyles from "../../styles/utilities.module.css"
 import prodPageStyles from "./ProductPage.module.css"
-import Button from "../../components/Button/Button";
 
 export default function ProductPage() {
     const navigate = useNavigate();
@@ -21,10 +21,10 @@ export default function ProductPage() {
 
     return (
         <section className={`${utilStyles.flexColumn} ${prodPageStyles.container} ${utilStyles.mainContainer}`}>
-                <Button name="Go Back" isSecundBtn onClick={() => navigate(-1)}/>
-            <div>
-                <h3>{capitalizeFirstLetter(product.category)}</h3>   
-            </div>
+            <Button name="Go Back" isSecundBtn onClick={() => navigate(-1)}/>
+            <Link to={`/categories/${product.category}`} className={prodPageStyles.productCateg}>
+                <h3 className={prodPageStyles.productCategName}>{capitalizeFirstLetter(product.category)}</h3>   
+            </Link>
             <article className={`grid ${prodPageStyles.productPageContainer}`}>
                 <article className={prodPageStyles.imageContainer}>
                     <img className={prodPageStyles.productImage} src={product.image} alt={product.title} />

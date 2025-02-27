@@ -30,8 +30,8 @@
 }
 
 .productDescription {
-    background-color: black;
-    color: white;
+    background-color: var(--main-container-color);
+    color: var(--font-color);
     width: 100%;
     height: auto;
     padding: 0.5em 0.8em;
