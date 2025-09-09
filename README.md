@@ -56,19 +56,19 @@ https://shopping-cart-c43.pages.dev/
 ## Screenshots
 
 Home Page
-![Home Page](public/screenshots/home.png)
+![Home Page](public/images/screenshots/Home.png)
 
 
 Categories Page
-![Shop Page](public/images/screenshots/categories.png)
+![Shop Page](public/images/screenshots/Categories.png)
 
 
 Search Page
-![Search Page](public/screenshots/search.png)
+![Search Page](public/images/screenshots/Search.png)
 
 
 Cart Page
-![Cart Page](public/screenshots/cart.png)
+![Cart Page](public/images/screenshots/Cart.png)
 
 
 ## Acknowledgements
